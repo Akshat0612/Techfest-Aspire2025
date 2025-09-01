@@ -1,0 +1,716 @@
+/* --- UNIVERSAL STYLES & VARIABLES --- */
+:root {
+    --primary-color: #6a11cb;
+    /* A vibrant purple */
+    --secondary-color: #2575fc;
+    /* A complementing blue */
+    --background-color: #f4f7f6;
+    --text-color: #333;
+    --card-bg-color: #ffffff;
+    --border-color: #dee2e6;
+    --header-footer-bg: #1e2a38;
+    /* A dark, modern color */
+}
+
+/* --- NEW: Keyframe Animations for fade-in effect --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Element Selector */
+body {
+    font-family: 'Poppins', sans-serif;
+    /* A more modern font */
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+/* Class Selector */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Pseudo-element for decorative headings */
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+/* --- HEADER & NAVIGATION (Using Flexbox) --- */
+header {
+    background-color: var(--header-footer-bg);
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    /* Flexbox for alignment */
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ID Selector */
+#logo {
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Pseudo-class selectors for interaction */
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+nav ul li a:focus {
+    outline: 2px solid var(--secondary-color);
+}
+
+
+/* --- MAIN CONTENT & BOX MODEL --- */
+main {
+    min-height: calc(100vh - 250px);
+    /* Ensures footer stays down */
+}
+
+.card {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    /* Border property */
+    border-radius: 10px;
+    padding: 30px;
+    /* Padding property */
+    margin-bottom: 25px;
+    /* Margin property */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* --- MODIFIED: Homepage Hero Section --- */
+.hero-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 80vh;
+    /* Make it take up most of the screen */
+    color: white;
+    background: linear-gradient(rgba(20, 30, 48, 0.8), rgba(36, 59, 85, 0.8)), url('https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover;
+    padding: 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-main h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-main p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin-bottom: 1.5rem;
+}
+
+/* --- MODIFIED: Call-to-Action Button --- */
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 15px 35px;
+    /* Larger padding */
+    text-decoration: none;
+    border-radius: 50px;
+    /* Pill shape */
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* --- NEW: Features Section for Homepage --- */
+.features-section {
+    padding: 60px 0;
+    background-color: #fff;
+    animation: fadeInUp 1s ease-out 0.5s;
+    /* Staggered animation */
+    animation-fill-mode: backwards;
+    /* Start animation from invisible state */
+}
+
+.features-section h2 {
+    /* MODIFIED: text-align changed from center */
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 25px;
+}
+
+.feature-card .icon {
+    font-size: 3rem;
+    /* Larger icons */
+    margin-bottom: 15px;
+    line-height: 1;
+}
+
+.feature-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: var(--header-footer-bg);
+}
+
+/* --- MODIFIED: Homepage Video Section --- */
+#hero-video {
+    /* MODIFIED: text-align removed to allow h2 to be left-aligned */
+    padding: 60px 0;
+    animation: fadeInUp 1s ease-out 1s;
+    animation-fill-mode: backwards;
+}
+
+/* MODIFIED: Center the video itself, not the whole section */
+#hero-video video {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* MODIFIED: Align the h2 inside this section to the left */
+#hero-video h2 {
+    text-align: left;
+}
+
+
+/* --- MODIFIED: Attractive Table Styles --- */
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    /* Keep this for clean lines */
+    margin-top: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    /* Important for border-radius */
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 18px 20px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Style for table data cells */
+.schedule-table td {
+    color: #555;
+    vertical-align: middle;
+}
+
+.schedule-table td i {
+    margin-right: 12px;
+    color: var(--primary-color);
+    width: 20px;
+    /* Aligns text neatly */
+    text-align: center;
+}
+
+/* Style for the main table header */
+.schedule-table thead th {
+    background-color: #f8f9fa;
+    color: var(--header-footer-bg);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Style for the new day header rows */
+.schedule-table .day-header {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* The interactive hover effect on data rows */
+.schedule-table tbody tr:not(:has(.day-header)):hover {
+    background-color: #f5f3ff;
+    /* A very light purple */
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.schedule-table tbody tr {
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Remove bottom border on last row of the body */
+.schedule-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+
+/* --- REGISTRATION FORM & ATTRIBUTE SELECTOR --- */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+/* Attribute Selector for styling specific inputs */
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(106, 17, 203, 0.2);
+    outline: none;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.submit-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* --- GALLERY PAGE (Using CSS Grid) --- */
+.photo-gallery {
+    display: grid;
+    /* Using CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* --- MY REGISTRATIONS PAGE --- */
+#registrations-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.registration-card {
+    background: #fff;
+    border-left: 5px solid var(--primary-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.07);
+}
+
+.registration-card h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.registration-card p {
+    margin: 5px 0;
+    word-wrap: break-word;
+}
+
+.registration-card .events {
+    margin-top: 10px;
+    font-style: italic;
+    color: #555;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--header-footer-bg);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 40px;
+}
+
+/* --- NEW: Hamburger Menu Styles --- */
+.nav-toggle {
+    display: none;
+    /* Hidden on desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+    width: 2em;
+    height: 3px;
+    background: white;
+    transition: all 0.2s ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: white;
+    transition: all 0.2s ease-in-out;
+}
+
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    bottom: -8px;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+/* --- RESPONSIVE DESIGN --- */
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    #main-nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        background: var(--header-footer-bg);
+
+        /* THE CRITICAL FIX: Ensure the menu is on top */
+        z-index: 999;
+
+        /* Hide menu by default */
+        visibility: hidden;
+        opacity: 0;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.2s ease-in-out, opacity 0.2s, visibility 0.2s;
+    }
+
+    /* This rule shows the menu */
+    #main-nav.nav-open {
+        visibility: visible;
+        opacity: 1;
+        transform: scaleY(1);
+    }
+
+    #main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+
+    /* X formation for hamburger when menu is open */
+    .nav-open .hamburger {
+        background: transparent;
+    }
+
+    .nav-open .hamburger::before {
+        transform: rotate(45deg) translate(5px, 6px);
+    }
+
+    .nav-open .hamburger::after {
+        transform: rotate(-45deg) translate(5px, -6px);
+    }
+
+    /* Keep your other responsive styles below this line */
+    h2::after {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    .schedule-table thead {
+        display: none;
+    }
+
+    .schedule-table,
+    .schedule-table tbody,
+    .schedule-table tr,
+    .schedule-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .schedule-table tr {
+        margin-bottom: 15px;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+    }
+
+    .schedule-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .schedule-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        font-weight: bold;
+    }
+
+    .schedule-table td:nth-of-type(1):before {
+        content: "Time";
+    }
+
+    .schedule-table td:nth-of-type(2):before {
+        content: "Event";
+    }
+
+    .schedule-table td:nth-of-type(3):before {
+        content: "Venue";
+    }
+}
+
+/* --- NEW: Audio Player Styles --- */
+.audio-greeting {
+    background: var(--card-bg-color);
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: -15px;
+    /* Helps integrate with the table below */
+    border-radius: 8px;
+    border-left: 5px solid var(--secondary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.audio-greeting p {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: var(--header-footer-bg);
+}
+
+.audio-greeting audio {
+    width: 100%;
+}
+
+/* --- NEW: Styles for links moved into a card --- */
+.card .social-links {
+    margin-bottom: 1rem;
+    text-align: center;
+    /* Center the icons in the card */
+}
+
+.card .social-links a {
+    color: var(--text-color);
+    /* Change icon color for light background */
+    font-size: 2rem;
+    /* Make them a bit bigger */
+    margin: 0 20px;
+}
+
+.card .social-links a:hover {
+    color: var(--primary-color);
+    /* Keep the hover effect */
+}
+
+/* --- ENHANCED: Gallery Link Button Style --- */
+.card .footer-link {
+    text-align: center;
+    margin-top: 25px;
+    /* Add some space above the button */
+}
+
+.card .footer-link a {
+    display: inline-block;
+    /* Make it behave like a block for padding */
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    /* Gradient background */
+    color: white;
+    /* White text for contrast */
+    padding: 12px 25px;
+    /* Comfortable padding */
+    text-decoration: none;
+    border-radius: 50px;
+    /* Pill shape */
+    font-size: 1rem;
+    font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    /* Subtle shadow */
+    border: none;
+    /* Ensure no default border */
+}
+
+.card .footer-link a:hover {
+    transform: translateY(-3px) scale(1.02);
+    /* Lift and slightly enlarge on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    /* More pronounced shadow on hover */
+    color: white;
+    /* Ensure text stays white */
+    text-decoration: none;
+    /* Remove underline on hover */
+}
+
+/* --- NEW: Lightbox Gallery Styles --- */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 85vh;
+    animation: fadeInUp 0.5s ease;
+}
+
+.lightbox-image {
+    display: block;
+    max-width: 100%;
+    max-height: 85vh;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.lightbox-caption {
+    text-align: center;
+    color: #eee;
+    margin-top: 10px;
+    font-style: italic;
+}

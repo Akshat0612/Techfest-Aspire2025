@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Aspire2025</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" id="logo">Aspire2025</a>
+            <div class="nav-container">
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="register.html" class="active">Register</a></li>
+                    <li><a href="my-registrations.html">My Registrations</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="card">
+                <h2>Register for Aspire2025</h2>
+                <form id="registrationForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name:</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="Enter Full Name" pattern="[a-zA-Z\s]+" title="Name can only contain letters">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter valid e-mail">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="1234567890" minlength="10" maxlength="10" pattern="[6-9]\d{9}">
+                    </div>
+                    <div class="form-group">
+                        <label>Events to Participate In:</label>
+                        <input type="checkbox" id="codestorm" name="events" value="CodeStorm">
+                        <label for="codestorm">CodeStorm</label><br>
+                        <input type="checkbox" id="robowars" name="events" value="RoboWars">
+                        <label for="robowars">RoboWars</label><br>
+                        <input type="checkbox" id="designx" name="events" value="DesignX">
+                        <label for="designx">DesignX</label>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit Registration</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Aspire2025. All Rights Reserved. Designed by Akshat Goyal.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

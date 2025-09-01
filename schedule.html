@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule - Aspire2025</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" id="logo">Aspire2025</a>
+            <div class="nav-container">
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="schedule.html" class="active">Schedule</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="my-registrations.html">My Registrations</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Event Schedule</h2>
+
+            <div class="audio-greeting">
+                <p>A welcome message from our event coordinator! 🎧</p>
+                <audio controls>
+                    <source src="audio/intro.mp3"
+                        type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Event</th>
+                        <th>Venue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th colspan="3" class="day-header">Day 1: October 24, 2025</th>
+                    </tr>
+                    <tr>
+                        <td>09:00 AM - 10:00 AM</td>
+                        <td><i class="fa-solid fa-flag-checkered"></i> Inauguration Ceremony</td>
+                        <td>Main Auditorium</td>
+                    </tr>
+                    <tr>
+                        <td>10:30 AM - 01:30 PM</td>
+                        <td><i class="fa-solid fa-code"></i> CodeStorm Challenge</td>
+                        <td>Computer Lab 1 & 2</td>
+                    </tr>
+                    <tr>
+                        <td>02:00 PM - 05:00 PM</td>
+                        <td><i class="fa-solid fa-robot"></i> RoboWars</td>
+                        <td>Workshop Area</td>
+                    </tr>
+                    <tr>
+                        <th colspan="3" class="day-header">Day 2: October 25, 2025</th>
+                    </tr>
+                    <tr>
+                        <td>10:00 AM - All Day</td>
+                        <td><i class="fa-solid fa-palette"></i> DesignX Hackathon</td>
+                        <td>Seminar Hall A</td>
+                    </tr>
+                    <tr>
+                        <td>01:00 PM - 04:00 PM</td>
+                        <td><i class="fa-solid fa-flag-checkered"></i> Closing Ceremony</td>
+                        <td>Main Auditorium</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Aspire2025. All Rights Reserved. Designed by Akshat Goyal.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
