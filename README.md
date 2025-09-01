@@ -8,7 +8,7 @@ A complete, multi-page, responsive website for a fictional college tech fest, "A
 
 ## Screenshot
 
-![Aspire2025 Homepage](https://i.imgur.com/your-screenshot-url.png)
+![Aspire2025 Homepage](images/ss.png/)
 *(**Note:** You should take a screenshot of your homepage, upload it to a service like Imgur, and paste the URL here.)*
 
 ---
