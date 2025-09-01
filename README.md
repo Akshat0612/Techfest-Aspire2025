@@ -49,23 +49,50 @@ This project was built using fundamental web technologies:
 ## 📁 File Structure
 
 The project is organized with a clean and maintainable file structure:
-Aspire2025-website/
-|
+```
+Aspire2025/
+├── audio/
+│ └── intro.mp3
 ├── css/
-│   └── style.css
+│ └── style.css
 ├── js/
-│   └── script.js
-├── media/
-│   └── highlights.mp4
-│
+│ └── script.js
+├── images/
+│ ├── clash.png
+│ ├── clash24.png
+│ ├── codestorm.png
+│ ├── codestorm2024.png
+│ ├── codestorm_challenge.png
+│ ├── design_winner.png
+│ ├── designx.png
+│ ├── discuss.png
+│ ├── discuss2.png
+│ ├── girl.png
+│ ├── hackathon_speech.png
+│ ├── in.png
+│ ├── inaugration.png
+│ ├── inaugration_speech.png
+│ ├── night.png
+│ ├── presentation.png
+│ ├── problem.png
+│ ├── robot.png
+│ ├── robowar_making.png
+│ ├── showcase.png
+│ ├── students.png
+│ ├── win.png
+│ └── winners.png
+├── videos/
+│ ├── Introduction.mp4
+│ └── Recording.mp4
 ├── index.html
 ├── events.html
 ├── schedule.html
 ├── register.html
 ├── my-registrations.html
 ├── gallery.html
-├── contact.html
-└── prev_gallery.html
+├── prev_gallery.html
+└── contact.html
+```
 
 ---
 
