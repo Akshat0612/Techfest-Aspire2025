@@ -9,7 +9,6 @@ A complete, multi-page, responsive website for a fictional college tech fest, "A
 ## Screenshot
 
 ![Aspire2025 Homepage](images/ss.png/)
-*(**Note:** You should take a screenshot of your homepage, upload it to a service like Imgur, and paste the URL here.)*
 
 ---
 
@@ -76,11 +75,11 @@ To run this project on your local machine:
 
 1.  **Clone the repository (or download the ZIP file):**
     ```bash
-    git clone [https://github.com/your-username/Aspire2025-website.git](https://github.com/your-username/Aspire2025-website.git)
+    git clone [https://github.com/Akshat0612/Techfest-Aspire2025](https://github.com/Akshat0612/Techfest-Aspire2025)
     ```
 2.  **Navigate to the project directory:**
     ```bash
-    cd Aspire2025-website
+    cd Techfest-Aspire2025
     ```
 3.  **Open `index.html` in your web browser:**
     * Simply double-click the `index.html` file, or right-click and choose "Open with" your favorite browser.
@@ -90,5 +89,5 @@ To run this project on your local machine:
 ## ✍️ Author
 
 * **Akshat Goyal**
-    * GitHub: [@your-github-username](https://github.com/your-github-username)
-    * LinkedIn: [Your LinkedIn Profile URL](https://www.linkedin.com/in/your-profile/)
+    * GitHub: [@Akshat0612](https://github.com/Akshat0612)
+    * LinkedIn: [linkedin.com/in/akshatgoyal06](https://www.linkedin.com/in/akshatgoyal06/)
